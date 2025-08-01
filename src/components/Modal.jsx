@@ -28,21 +28,27 @@ const Modal = ({ data, onClose }) => {
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
       <div
         ref={modalRef}
-        className="bg-white p-6 rounded-lg max-w-lg w-full relative"
+        className="bg-white p-6 rounded-lg max-w-lg w-full relative shadow-xl"
       >
         <button
-          className="absolute top-2 right-2 text-gray-600 text-xl"
+          className="absolute top-2 right-2 text-gray-600 text-2xl hover:text-gray-800"
           onClick={onClose}
         >
           ×
         </button>
-        <img
-          src={data.image}
-          alt={data.title}
-          className="w-full h-48 object-cover rounded mb-4"
-        />
-        <h2 className="text-xl font-bold mb-2">{data.title}</h2>
-        <p className="text-gray-700">{data.longDesc}</p>
+
+        {data.image && (
+          <img
+            src={data.image}
+            alt={data.title}
+            className="w-full h-48 object-cover rounded mb-4"
+          />
+        )}
+
+        <h2 className="text-xl font-bold text-blue-600 mb-2">{data.title}</h2>
+        <p className="text-gray-700 whitespace-pre-line">
+          {data.longDesc || data.description}
+        </p>
       </div>
     </div>
   );
