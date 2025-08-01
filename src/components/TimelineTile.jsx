@@ -1,24 +1,22 @@
 import React from "react";
-import { motion } from "framer-motion";
 
-const TimelineTile = ({ data, onClick }) => (
-  <motion.div
-    whileHover={{ scale: 1.02 }}
-    whileTap={{ scale: 0.98 }}
-    className="bg-white p-4 rounded-xl shadow-md cursor-pointer transition-all duration-300 h-full"
-    onClick={onClick}
-  >
-    <img
-      src={data.image}
-      alt={data.title}
-      className="w-full h-40 sm:h-48 object-cover rounded mb-3"
-    />
-    <h3 className="text-base sm:text-lg font-semibold mb-1">{data.title}</h3>
-    <p className="text-sm text-gray-600 line-clamp-3">{data.shortDesc}</p>
-    <span className="text-blue-600 text-sm font-medium mt-2 inline-block">
-      Read more →
-    </span>
-  </motion.div>
-);
+const TimelineTile = ({ data, onClick }) => {
+  return (
+    <div
+      className="bg-white rounded-lg p-4 shadow-md hover:shadow-lg transition cursor-pointer"
+      onClick={onClick}
+    >
+      <h3 className="text-lg font-semibold text-blue-600">{data.title}</h3>
+      <p className="text-sm text-gray-700 mt-2">{data.description}</p>
+      {data.image && (
+        <img
+          src={data.image}
+          alt={`Image for ${data.title}`}
+          className="mt-4 w-full h-48 object-cover rounded-lg shadow"
+        />
+      )}
+    </div>
+  );
+};
 
 export default TimelineTile;
