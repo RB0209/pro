@@ -3,7 +3,7 @@ export const timelineData = {
     {
       title: "Milestone in 2011",
       description: "Description of achievements and events in 2011.",
-      image: "/images/image-2011.jpg"
+      image: "Public/Image/image 1.jpg"
     }
   ],
   "2012": [
