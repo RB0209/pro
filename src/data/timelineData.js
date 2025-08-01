@@ -2,7 +2,7 @@ export const timelineData = {
   "2011": [
     {
       title: "Social Awareness through Local Public Events and Programs during Festivals",
-      image: "/Public/Image/1.png",
+      image: "Public/Image/1.png",
       shortDesc: "Placeholder short description",
       longDesc: "Placeholder long description"
     }
