@@ -360,7 +360,7 @@ export const timelineData = {
     },
     {
       title: "Food distribution",
-      image: "/images/2025_4.jpg",
+      image: "Public/Image/1.png",
       shortDesc: "Placeholder short description",
       longDesc: "Placeholder long description"
     }
